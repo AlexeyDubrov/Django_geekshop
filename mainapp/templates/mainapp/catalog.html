@@ -1,0 +1,35 @@
+{% extends 'mainapp/base.html' %}
+
+{% block container %}
+    <div class="hero-white">
+        {% include 'mainapp/includes/inc__main_menu.html' %}
+    </div>
+
+    <div class="details">
+        {% include 'mainapp/includes/inc__catalog_menu.html' %}
+
+        <div class="related">
+            <div class="title clearfix">
+                <h2>Продукты в категории {{ category.name|capfirst }}</h2>
+                <div class="paginator">
+                    {% if products.has_previous %}
+                        <a href="{% url 'mainapp:catalog_page' pk=category.pk page=products.previous_page_number %}">
+                            <
+                        </a>
+                    {% endif %}
+                    <span class="current">страница {{ products.number }} из {{ products.paginator.num_pages }}</span>
+                    {% if products.has_next %}
+                        <a href="{% url 'mainapp:catalog_page' pk=category.pk page=products.next_page_number %}">
+                            >
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="related-products clearfix">
+                {% for product in products %}
+                    {% include 'mainapp/includes/inc__product_in_list.html' %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

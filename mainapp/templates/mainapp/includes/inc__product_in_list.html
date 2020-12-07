@@ -1,0 +1,13 @@
+{% load static %}
+{% load my_tags %}
+
+<div class="block">
+    <a href="{% url 'main:product_page' product.pk %}">
+        <img src="{{ product.image|media_folder_products }}" alt="">
+        <div class="text">
+            <img src="{% static 'img/icon-hover.png' %}" alt="img">
+            <h4>{{ product.name }}</h4>
+            <p>{{ product.short_desc }}</p>
+        </div>
+    </a>
+</div>
