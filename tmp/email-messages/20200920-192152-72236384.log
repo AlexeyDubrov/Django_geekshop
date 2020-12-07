@@ -1,0 +1,14 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: 
+ =?utf-8?b?0J/QvtC00YLQstC10YDQttC00LXQvdC40LUg0YPRh9C10YLQvdC+0Lkg0LfQsNC/?=
+ =?utf-8?b?0LjRgdC4IHVzZXI0?=
+From: geekshop2020@mail.ru
+To: peter@geekshop.geekshop
+Date: Sun, 20 Sep 2020 16:21:52 -0000
+Message-ID: <160061891206.8400.10022175931239930662@AlexeyD>
+
+Для подтверждения учетной записи user4 на портале http://localhost:8000 перейдите по ссылке: 
+http://localhost:8000/auth/user/verify/peter@geekshop.geekshop/2c15413935051db9d3e61172fca9ffe1bce02074/
+-------------------------------------------------------------------------------
